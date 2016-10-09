@@ -102,6 +102,26 @@
           ## How did we do it?
           First let's start with the decisions
 
+          ### Key decisions
+          * Caching
+          * Version strategy
+          * Bundled dependencies
+          * Services (theme service)
+          * Build process
+          * Consumption pattern(s)
+          * What is included
+
+
+          ### What we decided
+          * Caching - Host on CDN with 8hr cache
+          * Version strategy - Use semantic versioning
+          * Bundled dependencies - Tools that help 80% of our apps
+          * Services - Header/footer service
+          * Build process - Built a new one from scratch. Fully automated
+          * Consumption pattern(s) - Support CDN and npm
+            * Highly recommend using the CDN unless they have a valid business case (caching)
+          * What is included - That's a longer story :)
+
           ## Questions?
         </script>
       </section>
