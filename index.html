@@ -1,79 +1,86 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Re-Architecting the Frontend at Scale</title>
-        <meta name="author" content="Shawn Sparks, Thomas Lindner">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/night.css" id="theme">
-        <style>
-            body {
-                background: #0091da;
-            }
-            .reveal section img {
-                background: transparent;
-                border: none;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                <section data-markdown data-separator="\n\n\n">
-                    <script type="text/template">
-                        # Re-Architecting the Frontend at Scale
+<head>
+  <meta charset="utf-8">
+  <title>Re-Architecting the Frontend at Scale</title>
+  <meta name="author" content="Shawn Sparks, Thomas Lindner">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/night.css" id="theme">
+  <style>
+    body {
+      background: #0091da;
+    }
+
+    .reveal section img {
+      background: transparent;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator="\n\n\n">
+        <script type="text/template">
+          # Re-Architecting the Frontend at Scale
 
 
-                        ## Principal
-                        * Financial Services
-                          * Retirement, Investments, Insurance
-                          * We help you live your best life
-                        * Global, X countries
-                        * X employees, Y in IT
-                        * Federated Model
+
+          ## Principal
+          * Financial Services
+            * Retirement, Investments, Insurance
+            * We help you live your best life
+          * Global, X countries
+          * X employees, Y in IT
+          * Federated Model
 
 
-                        ## Global Company
-                        ![locations around the world](global.png) <!-- .element style="background:#fff;" -->
+
+          ## Global Company
+          ![locations around the world](images/global.png) <!-- .element style="background:#fff;" -->
 
 
-                        ## Where We Were
-                        ![pfg themes architecture](pfg-themes.png)
+
+          ## Where We Were
+          ![pfg themes architecture](images/pfg-themes.png)
 
 
-                        ## Industry Trends
-                        Don't like how similar this picture is to last slide. Not intentional
-                        ![industry model](industry-bootstrap.png)
+
+          ## Industry Trends
+          Don't like how similar this picture is to last slide. Not intentional
+          ![industry model](images/industry-bootstrap.png)
 
 
-                        ## What We Wanted
-                        ![principal model](industry-preferred.png)
+
+          ## What We Wanted
+          ![principal model](images/industry-preferred.png)
 
 
-                        ## Questions?
-                    </script>
-                </section>
-            </div>
-        </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
-        <script type="text/javascript">
-            Reveal.initialize(
-                {
-                    history: true,
-                    dependencies: [
-                        {
-                            src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.js',
-                            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
-                        },
-                        {
-                            src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.js',
-                            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
-                        }
-                    ]
-                }
-            );
+          ## Questions?
         </script>
-    </body>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"></script>
+  <script type="text/javascript">
+    Reveal.initialize({
+      history: true,
+      dependencies: [{
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }, {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }]
+    });
+  </script>
+</body>
 </html>
