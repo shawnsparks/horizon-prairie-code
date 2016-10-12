@@ -14,6 +14,7 @@
     .reveal section img {
       background: transparent;
       border: none;
+      box-shadow: none;
     }
   </style>
 </head>
@@ -21,20 +22,21 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-markdown data-separator="\n\n\n">
+      <section data-markdown data-separator="\n\n\n\n" data-separator-vertical="\n\n\n">
         <script type="text/template">
           # Re-Architecting the Frontend at Scale
+
+          Shawn Sparks and Thomas Lindner
 
 
 
           ## Principal
+          * Founded in 1879. Innovating at 137!
           * Financial Services
             * Retirement, Investments, Insurance
             * We help you live your best life
-          * Global, X countries
+          * Global, 17 countries
           * X employees, Y in IT
-          * Federated Model
-
 
 
           ## Global Company
@@ -42,23 +44,120 @@
 
 
 
+          ## Principal's IT Model
+          * Federated Model
+            * Each business line has their own IT staff
+            * Corporate shared services
+          * BUs have autonomy
+
+
+
           ## Where We Were
+          * Theme solution tied to specific technologies (i.e. jsp, jsf)
+
           ![pfg themes architecture](images/pfg-themes.png)
 
 
 
-          ## Industry Trends
+          ## What was driving us
+
+          ### Industry Trends
           Don't like how similar this picture is to last slide. Not intentional
           ![industry model](images/industry-bootstrap.png)
 
 
+          ### Upcoming roadmap
+          * Moving to an unified global brand
+          * New technologies to support (i.e. Drupal (PHP), .NET, etc.)
+
+
 
           ## What We Wanted
+          * Enterprise framework
+          * Allow sites to provide unique needs
+
           ![principal model](images/industry-preferred.png)
 
 
 
+          ## The Answer
+
+          ### Horizon
+
+          * Horizon is a frontend framework designed to make implementing Principal applications and site easier
+
+
+          ## Horizon
+          * Consists of _one_ css and _one_ js file
+          * Everything is baked in
+            * Developers do not need to download jQuery, Bootstrap, Font Awesome etc.
+
+
+          ## Horizon
+          * Header and footer REST service to syndicate HTML
+          * TODO: INSERT PICTURE
+
+
+
+          ## How did we do it?
+          First let's start with the decisions
+
+          ### Key decisions
+          * Caching
+          * Version strategy
+          * Bundled dependencies
+          * Services (theme service)
+          * Build process
+          * Consumption pattern(s)
+          * What is included
+
+
+          ### What we decided
+          * Caching - Host on CDN with 8hr cache
+          * Version strategy - Use semantic versioning
+          * Bundled dependencies - Tools that help 80% of our apps
+          * Services - Header/footer service
+          * Build process - Built a new one from scratch. Fully automated
+          * Consumption pattern(s) - Support CDN and npm
+            * Highly recommend using the CDN unless they have a valid business case
+          * What is included - That's a longer story :)
+
+
+          ### Did we get it right?
+          * Not out of the gate, but that's okay!
+          * It was an evolution
+            * v0 had 11 minor releases
+            * v1 had 30 minor releases
+            * v2 has 11 minor releases
+          * Publish release notes internally
+            * Approached as internal OSS
+            * Call out key changes and list tickets resolved
+            * Strictly adhere to semantic versioning
+
+
+          ### Back to what is included
+          * We added a number of components in v1
+          * v2 saw some of them removed
+          * Launched Horizon Add-ons to provide the same support
+            * Add-ons receive the same level of support as core
+            * Hosted on the CDN
+            * Distributed as separate assets
+
+
+
+          ## Transition Challenges
+          * Managing what gets approved for core
+          * Determining what application needs are unique
+          * Build a culture of OSS and getting people to contribute
+          * Moving to explicit versions
+            * That means consumers have to upgrade
+            * Requires developers to be more strategic with breaking changes
+          * Documentation
+
+
+
           ## Questions?
+          ![principal model](images/logo.png)
         </script>
       </section>
     </div>
