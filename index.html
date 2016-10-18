@@ -22,7 +22,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-markdown data-separator="\n\n\n\n" data-separator-vertical="\n\n\n">
+      <section data-markdown data-separator="\n\n\n">
         <script type="text/template">
           # Re-Architecting the Frontend at Scale
 
@@ -39,6 +39,7 @@
           * ~12,500 employees, ~1,300 in IT
 
 
+
           ## Global Company
           ![locations around the world](images/global.png) <!-- .element style="background:#fff;" -->
 
@@ -48,27 +49,26 @@
           * Federated Model
             * Each business line has their own IT staff
             * Corporate shared services
-          * BUs have autonomy
+              * We work in this area
+          * Business Units have autonomy
 
 
 
           ## Where We Were
-          * Theme solution tied to specific technologies (i.e. jsp, jsf)
-
           ![pfg themes architecture](images/pfg-themes.png)
 
 
 
           ## What was driving us
-
-          ### Industry Trends
-          Don't like how similar this picture is to last slide. Not intentional
-          ![industry model](images/industry-bootstrap.png)
-
-
           ### Upcoming roadmap
           * Moving to an unified global brand
-          * New technologies to support (i.e. Drupal (PHP), .NET, etc.)
+          * New technologies to support (e.g. Drupal (PHP), .NET, etc.)
+
+
+
+          ## What was driving us
+          ### Industry Trends
+          ![industry model](images/industry-bootstrap.png)
 
 
 
@@ -81,28 +81,43 @@
 
 
           ## The Answer
-
           ### Horizon
+          * Horizon is a UI library designed to make implementing Principal applications and site easier
 
-          * Horizon is a frontend framework designed to make implementing Principal applications and site easier
 
 
-          ## Horizon
+          ## What is Horizon made up of?
+          * Horizon Core
+          * Horizon Theme Services
+          * Horizon Add-ons
+
+
+
+          ## Horizon Core
           * Consists of _one_ css and _one_ js file
           * Everything is baked in
             * Developers do not need to download jQuery, Bootstrap, Font Awesome etc.
+          * We added a number of components in v1
 
 
-          ## Horizon
+
+          ## Horizon Theme Services
           * Header and footer REST service to syndicate HTML
           * TODO: INSERT PICTURE
 
 
 
+          ## Horizon Add-ons
+          * Horizon Core v2 had a components removed
+          * Launched Horizon Add-ons to provide the same support
+            * Add-ons receive the same level of support as core
+            * Hosted on the CDN
+            * Distributed as separate assets
+
+
+
           ## How did we do it?
           First let's start with the decisions
-
-          ### Key decisions
           * Caching
           * Version strategy
           * Bundled dependencies
@@ -110,6 +125,7 @@
           * Build process
           * Consumption pattern(s)
           * What is included
+
 
 
           ### What we decided
@@ -120,7 +136,11 @@
           * Build process - Built a new one from scratch. Fully automated
           * Consumption pattern(s) - Support CDN and npm
             * Highly recommend using the CDN unless they have a valid business case
-          * What is included - That's a longer story :)
+          * Publish release notes internally
+            * Approached as internal OSS
+            * Call out key changes and list tickets resolved
+            * Strictly adhere to semantic versioning
+
 
 
           ### Did we get it right?
@@ -129,19 +149,6 @@
             * v0 had 11 minor releases
             * v1 had 30 minor releases
             * v2 has 11 minor releases
-          * Publish release notes internally
-            * Approached as internal OSS
-            * Call out key changes and list tickets resolved
-            * Strictly adhere to semantic versioning
-
-
-          ### Back to what is included
-          * We added a number of components in v1
-          * v2 saw some of them removed
-          * Launched Horizon Add-ons to provide the same support
-            * Add-ons receive the same level of support as core
-            * Hosted on the CDN
-            * Distributed as separate assets
 
 
 
