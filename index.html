@@ -59,15 +59,13 @@
 
 
 
-          ## What was driving us
-          ### Upcoming roadmap
+          ## Our Drivers
           * Moving to an unified global brand
           * New technologies to support (e.g. Drupal (PHP), .NET, etc.)
 
 
 
-          ## What was driving us
-          ### Industry Trends
+          ## Industry Trends
           ![industry model](images/industry-bootstrap.png)
 
 
@@ -80,24 +78,22 @@
 
 
 
-          ## The Answer
-          ### Horizon
-          * Horizon is a UI library designed to make implementing Principal applications and site easier
+          ## The Answer - Horizon
+          * Horizon is our proprietary UI library designed to make implementing Principal applications and site easier
 
 
 
           ## What is Horizon made up of?
-          * Horizon Core
-          * Horizon Theme Services
-          * Horizon Add-ons
+          * Core
+          * Theme Services
+          * Add-ons
 
 
 
           ## Horizon Core
           * Consists of _one_ css and _one_ js file
-          * Everything is baked in
+          * Dependencies are baked in
             * Developers do not need to download jQuery, Bootstrap, Font Awesome etc.
-          * We added a number of components in v1
 
 
 
@@ -108,38 +104,36 @@
 
 
           ## Horizon Add-ons
-          * Horizon Core v2 had a components removed
-          * Launched Horizon Add-ons to provide the same support
-            * Add-ons receive the same level of support as core
-            * Hosted on the CDN
-            * Distributed as separate assets
+          * 80/20 Rule
+          * Extras an app can add as needed
+          * Distributed as separate assets
+          * Receive the same level of support as core
 
 
 
           ## How did we do it?
           First let's start with the decisions
-          * Caching
+          * "Internal Open Source"
           * Version strategy
+          * Caching
           * Bundled dependencies
-          * Services (theme service)
           * Build process
           * Consumption pattern(s)
-          * What is included
 
 
 
           ### What we decided
-          * Caching - Host on CDN with 8hr cache
+          * Internal Open Source
+            * Anyone can submit PRs
+            * Publish release notes internally
+              * Call out key changes and list tickets resolved
+              * Strictly adhere to semantic versioning
           * Version strategy - Use semantic versioning
-          * Bundled dependencies - Tools that help 80% of our apps
-          * Services - Header/footer service
+          * Caching - Host on CDN with 8hr cache
+          * Bundled dependencies - Prevent issues from mismatched versions, multiple HTTP requests
           * Build process - Built a new one from scratch. Fully automated
           * Consumption pattern(s) - Support CDN and npm
             * Highly recommend using the CDN unless they have a valid business case
-          * Publish release notes internally
-            * Approached as internal OSS
-            * Call out key changes and list tickets resolved
-            * Strictly adhere to semantic versioning
 
 
 
