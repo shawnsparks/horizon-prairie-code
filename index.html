@@ -15,6 +15,7 @@
       background: transparent;
       border: none;
       box-shadow: none;
+      max-width: 85%;
     }
   </style>
 </head>
@@ -85,15 +86,32 @@
 
           ## What is Horizon made up of?
           * Core
-          * Theme Services
           * Add-ons
+          * Theme Services
 
 
 
           ## Horizon Core
+          * 80/20 Rule
           * Consists of _one_ css and _one_ js file
           * Dependencies are baked in
             * Developers do not need to download jQuery, Bootstrap, Font Awesome etc.
+          * Consumption patterns - Support CDN and npm
+            * Recommend apps start with the CDN
+
+
+          ## Core Example
+
+
+
+          ## Horizon Add-ons
+          * 80/20 Rule
+          * Extras an app can add as needed
+          * Central support for consistency & efficiency
+          * Distributed as separate assets
+
+
+          ## Add-ons Example
 
 
 
@@ -102,12 +120,7 @@
           * TODO: INSERT PICTURE
 
 
-
-          ## Horizon Add-ons
-          * 80/20 Rule
-          * Extras an app can add as needed
-          * Distributed as separate assets
-          * Receive the same level of support as core
+          ## Theme Services Example
 
 
 
@@ -118,22 +131,37 @@
           * Caching
           * Bundled dependencies
           * Build process
-          * Consumption pattern(s)
 
 
 
-          ### What we decided
-          * Internal Open Source
-            * Anyone can submit PRs
-            * Publish release notes internally
-              * Call out key changes and list tickets resolved
-              * Strictly adhere to semantic versioning
-          * Version strategy - Use semantic versioning
-          * Caching - Host on CDN with 8hr cache
-          * Bundled dependencies - Prevent issues from mismatched versions, multiple HTTP requests
-          * Build process - Built a new one from scratch. Fully automated
-          * Consumption pattern(s) - Support CDN and npm
-            * Highly recommend using the CDN unless they have a valid business case
+          ### Internal Open Source
+          * Anyone can submit PRs
+          * Strictly adhere to semantic versioning
+          * Publish release notes internally
+            * Call out key changes and list tickets resolved
+
+
+          ### Version Strategy
+          * Semantic versioning
+          * Major version in URLs
+            * /css/horizon/<span style="color:#fff;font-weight:bold;text-decoration:underline;">v2</span>/horizon.min.css
+          * New major version every 1-2 years
+
+
+          ### Caching
+          * 8-hr cache w/ etags
+          * Tradeoff for hundreds of apps
+            * Long-lived cache vs Redeploying apps
+            * User Behavior
+
+
+          ### Bundled Dependencies
+          * Prevent issues from mismatched versions
+          * Avoid multiple HTTP requests
+
+
+          ### Build Process
+          * Built a new one from scratch. Fully automated
 
 
 
