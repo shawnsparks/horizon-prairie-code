@@ -281,6 +281,14 @@
         condition: function() {
           return !!document.querySelector('[data-markdown]');
         }
+      }, {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      },{
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js'
       }]
     });
   </script>
