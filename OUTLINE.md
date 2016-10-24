@@ -8,4 +8,4 @@
 | 15min         | 28min        | Person 2 | Horizon core - Theme Service Examples |
 | 10min         | 38min        | Person 1 | How did we do it - Bundled dependencies |
 | 10min         | 48min        | Person 2 | Build process - Transistion challenges |
-| 05min         | 53min        | All      | Questions |
+| 10min         | 58min        | All      | Questions |
