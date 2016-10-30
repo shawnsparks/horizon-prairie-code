@@ -4,6 +4,10 @@
 
 ## Viewing the presentation
 
+### On github.io
+View it on [github.io](https://marshmellow1328.github.io/horizon-prairie-code/)
+
+### On your machine
 Open the `index.html` in your browser of choice.
 
 ## License
